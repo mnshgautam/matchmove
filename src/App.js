@@ -1,26 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import AddProduct from './components/addProduct';
+import ProductList from './components/productList';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+        <div className="app">
+          <header>
+            <div className="ui inverted segment"><div className="ui inverted secondary menu"><a className="active item">Home</a>
+            </div></div>
+          </header>
+          <main className="ui main">
+            <div className="sideLeft">
+              <AddProduct />
+            </div>
+            <div className="ui content">
+              <h2 className="ui header">Products</h2>
+              <ProductList />
+            </div>
+          </main>
+        </div>
     );
   }
 }
